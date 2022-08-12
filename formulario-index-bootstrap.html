@@ -12,33 +12,57 @@
 </head>
 
 <body>
-    <h3>Regístrate</h3>
-    <form>
-       <div class="form-group"> <!--Para crear un nuevo recuadro que rellenar hay que meterlo cada uno en un div class=form-group-->
-            <input type="text" class="form-control" id="InputApellidos" placeholder="Nombre">
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control" id="InputApellidos" placeholder="Apellidos">
-        </div>
-        <div class="form-group">
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
-                placeholder="Email">
-            <small id="emailHelp" class="form-text text-muted">Tu e-mail no será compartido con terceros</small>
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" id="InputPassword1" placeholder="Contraseña">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control" id="InputPassword1" placeholder="Confirmar contraseña">
-        </div>
-        <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">He leído y acepto los términos de uso</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Registrarme</button>
-        <button type="submit" class="btn btn-primary">Cancelar</button>
-        <button type="submit" class="btn btn-primary">Ya tengo cuenta</button>
-    </form>
+
+    <div class="container">
+        <form class="position-absolute top-50 start-50 translate-middle"> <!--el position lo ubica exactamente en el centro-->
+            <h3 class="display-6 text-center">Regístrate</h3>
+            <!--El g-3 establece al distancia entre elemento de manera vertical-->
+            <div>
+                <!--meterlo en otro div hará que se puedan organizar los elementos uno debajo del otro-->
+                <div class="form-group mb-4">
+                    <!--col-6 le da el ancho al recuadro-->
+                    <!--Para crear un nuevo recuadro que rellenar hay que meterlo cada uno en un div class=form-group-->
+                    <input type="text" class="form-control" id="InputApellidos" placeholder="Nombre"> <!--El placeholder incorporará texto DENTRO de la caja de texto-->
+                </div>
+            </div>
+            <div>
+                <div class="form-group mb-4">
+                    <input type="text" class="form-control" id="InputApellidos" placeholder="Apellidos"> <!--Para añadir un texto al lado de la caja debo meterlo en un label, incorporar los mismos parámetros puestos en este caso y la palabra que quiero que aparezca-->
+                </div>
+            </div>
+            <div>
+                <div class="form-group mb-4">
+                    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
+                        placeholder="Email">
+                    <small id="emailHelp" class="form-text text-muted">Tu e-mail no será compartido con terceros</small>
+                </div>
+            </div>
+            <div>
+                <div class="form-group mb-4">
+                    <input type="password" class="form-control" id="InputPassword1" placeholder="Contraseña">
+                </div>
+            </div>
+            <div>
+                <div class="form-group mb-4">
+                    <input type="password" class="form-control" id="InputPassword1" placeholder="Confirmar contraseña">
+                </div>
+            </div>
+            <div class="form-check mb-4">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">He leído y acepto los términos de uso</label>
+            </div>
+            <div class="d-grid"> 
+                <button type="submit" class="btn btn-primary mb-4">Registrarme</button>
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary mb-4">Cancelar</button>
+            </div>
+            <div>
+                <span><a href="#">Ya tengo cuenta</a></span>
+            </div>
+        </form>
+    </div>
+    <!--se supone que esta etiqueta hace que tenga funcionalidad más real <script src="bootstrap.bundle.min.js"></script>-->
 </body>
 
 </html>
