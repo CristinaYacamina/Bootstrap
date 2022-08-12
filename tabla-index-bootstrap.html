@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabla con Bootstrap</title>
-</head>
+    <link rel="stylesheet" href="tabla-estilos-bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+     </head>
+
 <body>
-    
+    <div class="table-responsive pt-3 px-5 text-center w-75 m-auto"> <!--Para establecer el margin y padding de la tabla entera es desde aquí o en el de inmediatamente abajo-->
+        <table class="table table-hover caption-top">
+            <!--en el CSS se hace mencion al class con .-->
+            <h3 scope="col">PERSONAL</h3>
+            <thead>
+                <!--Contenido de la cabecera EN la tabla-->
+                <tr class="table-secondary">
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Puesto</th>
+                    <th scope="col">Experiencia</th>
+                    <th scope="col">Adjunta CV</th>
+                    <th scope="col">Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody class="table-light">
+                <!--Contenido del cuerpo en la tabla-->
+                <tr>
+                    <th scope="row">1</th>
+                    <td>María</td>
+                    <td>Perez</td>
+                    <td>Sistemas</td>
+                    <td>4 años</td>
+                    <td>Sí</td>
+                    <td>Media</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Juan</td>
+                    <td>Espinoza</td>
+                    <td>Atención al cliente</td>
+                    <td>5 años</td>
+                    <td>Sí</td>
+                    <td>Completa</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Esther</td>
+                    <td>Mendoza</td>
+                    <td>Marketing</td>
+                    <td>7 meses</td>
+                    <td>Sí</td>
+                    <td>Completa</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 <footer></footer>
+
 </html>
