@@ -7,4 +7,21 @@ $theme-colors: (
   "danger": $danger
 );
 
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+$p-5: (
+  "padding": 3rem
+);
+
+
+$p-40: (
+  "padding": 40px
+);
+
+
+$p-5: map-merge($p-5, $p-40 );
+
 @import "./node_modules/bootstrap/scss/bootstrap.scss";
