@@ -1,27 +1,18 @@
 $primary: #8e0cf9;
 $danger: #ff4136;
 
+/* Parámetro original en Bootstrap:
+$font-family-sans-serif: "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;*/
 
-$theme-colors: (
-  "primary": $primary,
-  "danger": $danger
-);
+$font-family-sans-serif: 'Noto Sans', sans-serif;
 
-
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/mixins";
-
-$p-5: (
-  "padding": 3rem
-);
-
-
-$p-40: (
-  "padding": 40px
-);
-
-
-$p-5: map-merge($p-5, $p-40 );
+$width:
+        25 25%,
+        50 50%,
+        60 60%,
+        75 75%,
+        100 100%,
+        auto auto;
+      
 
 @import "./node_modules/bootstrap/scss/bootstrap.scss";

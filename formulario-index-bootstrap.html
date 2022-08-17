@@ -7,42 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Bootstrap</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> <!--con este enlace se sincroniza con todos los estilos de Bootstrap en su web-->
 
     <style>
-
         body {
             background: rgb(230, 230, 230);
             /*En caso de que quiera poner un degradado, la nomenclatura será: 
             background: linear-gradient (to right, COLOR, COLOR);
             y en caso de que exista fallo o imposibilidad de abrir el degradado, saldrá el color sólido puesto por encima*/
+
         }
 
         .bg {
             background-image: url(https://images.unsplash.com/photo-1599050751791-a3d0feff527b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80);
             background-position: center center;
+            height: 662px;
         }
+
+        .container-fluid {
+            width: 835px; /*anchura proporcional*/
+            height: 662px; /*altura para que coincida con la img*/
+            
+        }
+
+
     </style>
 </head>
 
 <body>
 
-    <div class="container w-75 bg-white mt-5 mb-5 rounded shadow">
+    <div class="container-fluid bg-white w-60 my-5 rounded shadow" >
         <div class="row align-items-stretch">
-            <div class="col bg d-none d-lg-block col-md-4 col-lg-4 col-xl-6 rounded-start shadow"> <!--el valor d-none le dirá a la img que desaparezca cuando el navegador tenga la medida que d-lg-block establezca-->
-
+            <div class="img-fluid col bg d-none d-lg-block rounded-start shadow">
+                <!--el valor d-none le dirá a la img que desaparezca cuando el navegador tenga la medida que d-lg-block establezca-->
+                <!--col-6 le da el ancho al recuadro-->
             </div>
-            <div class="col bg-white p-5 rounded">
-                <h2 class="fw-bold text-center py-5">Regístrate</h2>
-                <form action="#">
+            <div class="col rounded">
+                <h2 class="fw-bold text-center pt-5">Regístrate</h2>
+                <form class="mx-0 px-5 py-5" action="#">
                     <!--al meterlo en un action y NO en un class permite la visualización de la imagen al lado del propio formulario-->
-                     <div>
+                    <div>
                         <!--meterlo en otro div hará que se puedan organizar los elementos uno debajo del otro-->
-                        <div class="form-group mb-4">
-                            <!--col-6 le da el ancho al recuadro-->
+                        <div class="form-group mb-4 me-0  ">
                             <!--Para crear un nuevo recuadro que rellenar hay que meterlo cada uno en un div class=form-group-->
-                            <input type="text" class="form-control" id="InputApellidos" placeholder="Nombre">
+                            <input type="text" class="form-control" id="InputNombre" placeholder="Nombre">
                             <!--El placeholder incorporará texto DENTRO de la caja de texto-->
                         </div>
                     </div>
@@ -61,7 +71,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="form-group mb-4">
+                        <div class="form-group mb-4 ">
                             <input type="password" class="form-control" id="InputPassword1" placeholder="Contraseña">
                         </div>
                     </div>
@@ -73,16 +83,16 @@
                     </div>
                     <div class="form-check mb-4">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">He leído y acepto los términos de
+                        <label class="form-check-label" for="exampleCheck1">He leído y acepto los términos y condiciones de
                             uso</label>
                     </div>
                     <div class="row">
                         <!--al meter los dos botones en un row e incluir un col en el class de cada botón, le digo que quiero que me los ponga al mismo nivel-->
                         <div class="col">
-                            <button class="btn btn-primary w-100 my-4">Registrarme</button>
+                            <button class="btn btn-primary my-4">Registrarme</button>
                         </div>
                         <div class="col">
-                            <button class="btn btn-outline-primary w-100 my-4">Cancelar</button>
+                            <button class="btn btn-outline-primary my-4">Cancelar</button>
                         </div>
                     </div>
                     <div class="row text-center">
@@ -103,7 +113,5 @@
 
 <!--POR HACER:
 1. Redimensionar tamaño img para que coincida con la versión HTML CSS
-2. Estrechar conjunto de img y formulario
-3. Cambiar tipografías
-4. Padding 40
-5. Cambiar de rectángulos a líneas-->
+2. Arreglar responsive
+3. Padding en general: 40, entre elementos: 16-->
