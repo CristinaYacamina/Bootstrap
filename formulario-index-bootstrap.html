@@ -26,10 +26,8 @@
             height: 662px;
         }
 
-        .container-fluid {
-            width: 835px; /*anchura proporcional*/
+        .container {
             height: 662px; /*altura para que coincida con la img*/
-            
         }
 
 
@@ -38,7 +36,7 @@
 
 <body>
 <!--<div class="container-fluid"> David propuso meter TODO en un div, encuentra conflicto entre el container-fluid y weight-->
-    <div class="container-fluid bg-white w-60 my-5 rounded shadow" >
+    <div class="container bg-white w-75 my-5 rounded shadow" > <!--entra en conflicto el parámetro que he creado de w-60 con el responsive. Al dejar estos parámetros funciona correctamente-->
         <div class="row align-items-stretch">
             <div class="img-fluid col bg d-none d-lg-block rounded-start shadow">
                 <!--el valor d-none le dirá a la img que desaparezca cuando el navegador tenga la medida que d-lg-block establezca-->
