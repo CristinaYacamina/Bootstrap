@@ -38,17 +38,17 @@
 <!--<div class="container-fluid"> David propuso meter TODO en un div, encuentra conflicto entre el container-fluid y weight-->
     <div class="container bg-white w-75 my-5 rounded shadow" > <!--entra en conflicto el parámetro que he creado de w-60 con el responsive. Al dejar estos parámetros funciona correctamente-->
         <div class="row align-items-stretch">
-            <div class="img-fluid col bg d-none d-lg-block rounded-start shadow">
+            <div class="img-fluid col bg d-none d-lg-block rounded-start shadow col-md-5 col-lg-5 col-xl-6">
                 <!--el valor d-none le dirá a la img que desaparezca cuando el navegador tenga la medida que d-lg-block establezca-->
                 <!--col-6 le da el ancho al recuadro-->
             </div>
             <div class="col rounded">
                 <h2 class="fw-bold text-center pt-5">Regístrate</h2>
-                <form class="mx-0 px-5 py-5" action="#">
+                <form class="mx-0 px-5 py-5  needs-validation" action="#">
                     <!--al meterlo en un action y NO en un class permite la visualización de la imagen al lado del propio formulario-->
                     <div>
                         <!--meterlo en otro div hará que se puedan organizar los elementos uno debajo del otro-->
-                        <div class="form-group mb-4 me-0  ">
+                        <div class="form-group mb-4">
                             <!--Para crear un nuevo recuadro que rellenar hay que meterlo cada uno en un div class=form-group-->
                             <input type="text" class="form-control" id="InputNombre" placeholder="Nombre">
                             <!--El placeholder incorporará texto DENTRO de la caja de texto-->
@@ -64,8 +64,8 @@
                         <div class="form-group mb-4">
                             <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"
                                 placeholder="Email">
-                            <small id="emailHelp" class="form-text text-muted">Tu e-mail no será compartido con
-                                terceros</small>
+                            <!--<small id="emailHelp" class="form-text text-muted">Tu e-mail no será compartido con
+                                terceros</small>-->
                         </div>
                     </div>
                     <div>
@@ -87,10 +87,10 @@
                     <div class="row">
                         <!--al meter los dos botones en un row e incluir un col en el class de cada botón, le digo que quiero que me los ponga al mismo nivel-->
                         <div class="col">
-                            <button class="btn btn-primary my-4">Registrarme</button>
+                            <button class="btn btn-primary w-100 my-4">Registrarme</button>
                         </div>
                         <div class="col">
-                            <button class="btn btn-outline-primary my-4">Cancelar</button>
+                            <button class="btn btn-outline-primary w-100 my-4">Cancelar</button>
                         </div>
                     </div>
                     <div class="row text-center">
@@ -107,9 +107,3 @@
 
 </html>
 
-
-
-<!--POR HACER:
-1. Redimensionar tamaño img para que coincida con la versión HTML CSS
-2. Arreglar responsive
-3. Padding en general: 40, entre elementos: 16-->
